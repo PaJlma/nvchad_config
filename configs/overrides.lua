@@ -12,6 +12,8 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "python",
+    "c_sharp",
   },
   indent = {
     enable = true,
@@ -39,7 +41,10 @@ M.mason = {
     "clang-format",
 
     -- python
-    "pyright"
+    "pyright",
+
+    -- c-sharp
+    "omnisharp",
   },
 }
 
