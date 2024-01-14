@@ -10,6 +10,7 @@ M.treesitter = {
     "typescript",
     "tsx",
     "c",
+    "cpp",
     "markdown",
     "markdown_inline",
     "python",
@@ -35,6 +36,7 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+    "emmet_language_server",
 
     -- c/cpp stuff
     "clangd",

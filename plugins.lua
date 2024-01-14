@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -36,6 +36,11 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
+  },
+
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    event = "VeryLazy",
   },
 
   -- Install a plugin
@@ -72,14 +77,63 @@ local plugins = {
     event = "VeryLazy",
     dependencies = {
       "nvim-lua/plenary.nvim",
-    }
-  }
+    },
+  },
 
+  {
+    -- МУльтикурсор
+    "mg979/vim-visual-multi",
+    event = "VeryLazy",
+  },
+
+  {
+    "machakann/vim-sandwich",
+    event = "VeryLazy",
+  },
+
+  {
+    -- JSX Introdution
+    "neoclide/vim-jsx-improve",
+    event = "VeryLazy",
+  },
+
+  {
+    -- Подстсветка .ts .tsx файлов
+    "HerringtonDarkholme/yats.vim",
+    event = "VeryLazy",
+  },
+
+  {
+    -- Emmet
+    "mattn/emmet-vim",
+    event = "VeryLazy",
+  },
+
+  {
+    -- HighLighter
+    "brenoprata10/nvim-highlight-colors",
+    event = "VeryLazy",
+    opts = {
+      render = "background",
+      enable_named_colors = true,
+    },
+  },
+
+  {
+    -- PX To REM
+    "jsongerber/nvim-px-to-rem",
+    event = "VeryLazy",
+    opts = {
+      root_font_size = 16,
+      decimal_count = 4,
+      show_virtual_text = true,
+    },
+  },
   -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
+  {
+    "NvChad/nvim-colorizer.lua",
+    enabled = false,
+  },
 
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
